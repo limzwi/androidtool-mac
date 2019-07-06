@@ -24,6 +24,10 @@ protocol IOSDeviceDelegate {
 }
 
 class IOSDeviceHelper: NSObject, AVCaptureFileOutputRecordingDelegate {
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+        
+    }
+    
     var session : AVCaptureSession!
     var movieOutput : AVCaptureMovieFileOutput!
     var stillImageOutput : AVCaptureStillImageOutput!
@@ -80,7 +84,7 @@ class IOSDeviceHelper: NSObject, AVCaptureFileOutputRecordingDelegate {
             file = URL(fileURLWithPath: filePath)
             
             recorderDelegate.iosRecorderDidStartPreparing(device)
-            self.movieOutput.startRecording(toOutputFileURL: file, recordingDelegate: self)
+            self.movieOutput.startRecording(to: file, recordingDelegate: self)
         }
         else
         {
@@ -100,10 +104,10 @@ class IOSDeviceHelper: NSObject, AVCaptureFileOutputRecordingDelegate {
         for foundDevice in AVCaptureDevice.devices() {
             print(foundDevice)
             if (foundDevice as AnyObject).modelID! == "iOS Device" {
-                let device = foundDevice as! AVCaptureDevice
+                let device = foundDevice 
                 let deviceName = device.localizedName
                 let uuid = device.uniqueID
-                print("hello \(deviceName!) aka \(uuid!)")
+                print("hello \(deviceName) aka \(uuid)")
                 deviceFound(foundDevice as AnyObject)
             }
         }

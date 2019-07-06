@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94A202EB22D03C6700AC2242 /* adb in Resources */ = {isa = PBXBuildFile; fileRef = 94A202EA22D03C6700AC2242 /* adb */; };
 		C83D2E091AEDD7A300CD066D /* scriptsPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D2E081AEDD7A300CD066D /* scriptsPopoverViewController.swift */; };
 		C83D2E0E1AEF02E700CD066D /* Take Bugreport.sh in Resources */ = {isa = PBXBuildFile; fileRef = C83D2E0D1AEF02E700CD066D /* Take Bugreport.sh */; };
 		C84079D31C054BCF002EC6D4 /* DropReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84079D21C054BCF002EC6D4 /* DropReceiverView.swift */; };
@@ -78,7 +79,6 @@
 		C8BF506D1AFBE1E9005C725D /* takeScreenshotOfDeviceWithUUID.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8BF506C1AFBE1E9005C725D /* takeScreenshotOfDeviceWithUUID.sh */; };
 		C8C86BF01C50976D0087858B /* installObbForSerial.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8C86BEF1C50976D0087858B /* installObbForSerial.sh */; };
 		C8C86BF21C50AEEC0087858B /* ObbHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C86BF11C50AEEC0087858B /* ObbHandler.swift */; };
-		C8D4F7A01BF84BF5001F8C6E /* adb in Resources */ = {isa = PBXBuildFile; fileRef = C8D4F79F1BF84BF5001F8C6E /* adb */; };
 		C8E521B31C0ED06800777117 /* getCurrentActivityForIdentifier.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8E521B21C0ED06800777117 /* getCurrentActivityForIdentifier.sh */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +105,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		94A202EA22D03C6700AC2242 /* adb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = adb; sourceTree = "<group>"; };
 		C83D2E081AEDD7A300CD066D /* scriptsPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scriptsPopoverViewController.swift; sourceTree = "<group>"; };
 		C83D2E0D1AEF02E700CD066D /* Take Bugreport.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Take Bugreport.sh"; sourceTree = "<group>"; };
 		C84079D21C054BCF002EC6D4 /* DropReceiverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropReceiverView.swift; sourceTree = "<group>"; };
@@ -183,7 +184,6 @@
 		C8BF506E1AFBE21A005C725D /* idevicescreenshot */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = idevicescreenshot; sourceTree = "<group>"; };
 		C8C86BEF1C50976D0087858B /* installObbForSerial.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = installObbForSerial.sh; sourceTree = "<group>"; };
 		C8C86BF11C50AEEC0087858B /* ObbHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObbHandler.swift; path = AndroidTool/ObbHandler.swift; sourceTree = "<group>"; };
-		C8D4F79F1BF84BF5001F8C6E /* adb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = adb; sourceTree = "<group>"; };
 		C8E521B21C0ED06800777117 /* getCurrentActivityForIdentifier.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = getCurrentActivityForIdentifier.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,7 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				C86C16081C14F7F700E22CEC /* extractIconFromApk.sh */,
-				C8D4F79F1BF84BF5001F8C6E /* adb */,
+				94A202EA22D03C6700AC2242 /* adb */,
 				C86C15F61C13958100E22CEC /* aapt */,
 				C8BF506E1AFBE21A005C725D /* idevicescreenshot */,
 				C8B9D4821AE9B34F00927B96 /* ffmpeg */,
@@ -418,7 +418,7 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Morten Just Petersen";
 				TargetAttributes = {
 					C8B5145F1AE85D610071C86A = {
@@ -434,8 +434,8 @@
 				};
 			};
 			buildConfigurationList = C8B5145B1AE85D600071C86A /* Build configuration list for PBXProject "AndroidTool" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -467,11 +467,11 @@
 				C8A0F8B61AFC319A00B3A90C /* libzip.2.dylib in Resources */,
 				C8A0F8B71AFC319A00B3A90C /* libxml2.2.dylib in Resources */,
 				C8A0F8B81AFC319A00B3A90C /* libusbmuxd.2.dylib in Resources */,
+				94A202EB22D03C6700AC2242 /* adb in Resources */,
 				C86C15FB1C1395F700E22CEC /* installZip.sh in Resources */,
 				C8A0F8B91AFC319A00B3A90C /* libusbmuxd.1.0.8.dylib in Resources */,
 				C86C16051C13B4B900E22CEC /* uninstallPackageOnDevice.sh in Resources */,
 				C8A0F8BA1AFC319A00B3A90C /* libplist.2.dylib in Resources */,
-				C8D4F7A01BF84BF5001F8C6E /* adb in Resources */,
 				C8A0F8BB1AFC319A00B3A90C /* libplist.1.1.10.dylib in Resources */,
 				C86C15F91C1395DC00E22CEC /* getApkInfo.sh in Resources */,
 				C8A0F8BC1AFC319A00B3A90C /* libosxfuse_i64.2.dylib in Resources */,
@@ -583,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -591,12 +592,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -629,6 +632,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -636,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -644,12 +649,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -673,7 +680,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -684,7 +693,10 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AndroidTool/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AndroidTool",
@@ -693,7 +705,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mortenjust.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -704,7 +716,10 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AndroidTool/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AndroidTool",
@@ -713,7 +728,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mortenjust.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -731,10 +746,14 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AndroidToolTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mortenjust.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AndroidTool.app/Contents/MacOS/AndroidTool";
 			};
 			name = Debug;
@@ -749,10 +768,14 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AndroidToolTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mortenjust.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AndroidTool.app/Contents/MacOS/AndroidTool";
 			};
 			name = Release;

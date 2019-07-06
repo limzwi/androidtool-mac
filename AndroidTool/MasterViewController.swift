@@ -43,13 +43,13 @@ class MasterViewController: NSViewController, DeviceDiscovererDelegate, NSTableV
         showDevicePicker(apkPath)
     }
 
-    
+    // Todo this part might be an issue as it is supposed to be failable
     func showDevicePicker(_ apkPath:String){
         let devicePickerVC = DevicePickerViewController(nibName: "DevicePickerViewController", bundle: nil)
-        devicePickerVC?.devices = devices
-        devicePickerVC?.apkPath = apkPath
+        devicePickerVC.devices = devices
+        devicePickerVC.apkPath = apkPath
         if #available(OSX 10.10, *) {
-            self.presentViewControllerAsSheet(devicePickerVC!)
+            self.presentAsSheet(devicePickerVC)
         } else {
             // Fallback on earlier versions
         }

@@ -10,7 +10,7 @@ import Cocoa
 
 class WindowMoverView: NSView {
     
-    override func register(forDraggedTypes newTypes: [String]) {
+    func register(forDraggedTypes newTypes: [String]) {
         Swift.print("$$ registering")
         let fileTypes = [
             ".apk"
